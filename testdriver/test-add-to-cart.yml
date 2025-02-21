@@ -1,0 +1,19 @@
+version: 4.2.12
+session: 67b8f8a582065b7404deb275
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on a product.
+    commands:
+      - command: hover-text
+        text: Echo Dot 4ª geração
+        description: product name under "Confira os Dispositivos Amazon"
+        action: click
+  - prompt: Click on "Add to Cart" for the product.
+    commands: []
+  - prompt: Assert that the item is added to the cart successfully.
+    commands:
+      - command: assert
+        expect: the product is unavailable
