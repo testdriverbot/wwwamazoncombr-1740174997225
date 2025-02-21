@@ -1,0 +1,15 @@
+version: 4.2.12
+session: 67b8f8b282065b7404deb281
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Type a search term into the search bar.
+    commands:
+      - command: hover-text
+        text: amazon.com.br
+        description: address bar in the browser
+        action: click
+      - command: type
+        text: laptop
